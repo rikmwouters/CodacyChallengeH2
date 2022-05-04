@@ -29,7 +29,7 @@ class TodoController {
                 .orElseThrow(() -> new TodoNotFoundException(id));
     }
 
-    @PatchMapping("/todos/{id}")
+    @PatchMapping("/todo/{id}")
     Todo updateOne(@RequestBody Todo newTodo, @PathVariable Long id) {
 
         return repository.findById(id)
