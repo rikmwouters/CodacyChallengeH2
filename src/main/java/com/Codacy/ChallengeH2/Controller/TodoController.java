@@ -1,7 +1,10 @@
-package com.Codacy.ChallengeH2;
+package com.Codacy.ChallengeH2.Controller;
 
 import java.util.List;
 
+import com.Codacy.ChallengeH2.Models.Todo;
+import com.Codacy.ChallengeH2.Exceptions.TodoNotFound.TodoNotFoundException;
+import com.Codacy.ChallengeH2.Repository.TodoRepository;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -44,8 +47,8 @@ class TodoController {
                 });
     }
 
-    @DeleteMapping("/todos/{id}")
-    void deleteTodo(@PathVariable Long id) {
+    @DeleteMapping("/todo/{id}")
+    void deleteOne(@PathVariable Long id) {
         repository.deleteById(id);
     }
 }

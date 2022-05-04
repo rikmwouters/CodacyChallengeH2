@@ -1,4 +1,4 @@
-package com.Codacy.ChallengeH2;
+package com.Codacy.ChallengeH2.Exceptions.TodoNotFound;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

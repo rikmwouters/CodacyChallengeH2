@@ -1,4 +1,4 @@
-package com.Codacy.ChallengeH2;
+package com.Codacy.ChallengeH2.Models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +15,7 @@ public class Todo {
 
     }
 
-    Todo (String title) {
+    public Todo(String title) {
         this.title = title;
         this.completed = false;
     }

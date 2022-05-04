@@ -1,5 +1,7 @@
-package com.Codacy.ChallengeH2;
+package com.Codacy.ChallengeH2.Database;
 
+import com.Codacy.ChallengeH2.Models.Todo;
+import com.Codacy.ChallengeH2.Repository.TodoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
