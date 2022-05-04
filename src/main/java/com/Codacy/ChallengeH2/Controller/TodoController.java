@@ -41,10 +41,7 @@ class TodoController {
                     todo.setCompleted(newTodo.getCompleted());
                     return repository.save(todo);
                 })
-                .orElseGet(() -> {
-                    newTodo.setId(id);
-                    return repository.save(newTodo);
-                });
+                .orElseThrow(() -> new TodoNotFoundException(id));
     }
 
     @DeleteMapping("/todo/{id}")
