@@ -1,5 +1,28 @@
 # CodacyChallengeH2
 
+## Introduction
+
+The Codacy Challenge H2 application is an API that stores TODOs on an H2 in-memory database and can be interacted with using HTTP requests. The database is pre-populated with two example TODOs, and the user can add new TODOs, modify existing TODOs and delete TODOs. When a TODO is added or modified, the API will return the TODO to the user as a JSON object.
+
+The TODO model consists of the following fields:
+
+| Field      | Data type | Description |
+| ----------- | ----------- | ----------- |
+| id      | Long       | Unique identifier |
+| title   | String        | Description of the TODO |
+| completed   | Boolean        | Whether or not the TODO has been completed |
+
+The API has the following endpoints:
+
+| Functionality      | Request type | URL Path | Notes |
+| ----------- | ----------- | ----------- | ----------- |
+| List all TODOs      | GET       | / | |
+| Add new TODO   | PUT        | / | |
+| View specific TODO   | GET        | /todo/:id | Instead of ':id', use the TODO's identifier. |
+| Modify TODO   | PATCH        | /todo/:id | Instead of ':id', use the TODO's identifier. Include the modified TODO as a JSON in the request body, and add "content-type: application/json" to the request header. |
+| Delete TODO   | DELETE        | /todo/:id | Instead of ':id', use the TODO's identifier. |
+
+
 ## Requirements
 
 Please make sure the following dependencies are installed:
