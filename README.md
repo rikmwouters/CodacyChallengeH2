@@ -24,7 +24,7 @@ The API has the following endpoints:
 
 ## Requirements
 
-This tutorial assumes Linux as the operating system. The CodacyChallengeH2 application runs on Windows too, but the procedure differs from the steps below.
+While Windows can be used to run and use the application, this guide is limited to Linux environments.
 
 Please make sure the following dependencies are installed (Ubuntu installation commands are shown):
 
@@ -58,7 +58,7 @@ java -cp target/ChallengeH2-0.0.1-SNAPSHOT.jar -Dloader.main=com.Codacy.Challeng
 
 ## Interacting with the application
 
-Please see the API endpoints table in the introduction section of this README.
+Please see the API endpoints table in the introduction section of this guide.
 
 Open another terminal. The pre-loaded TODOs can be viewed using the following cURL command. 
 
