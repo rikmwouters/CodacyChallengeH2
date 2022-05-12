@@ -34,31 +34,31 @@ java -cp target/ChallengeH2-0.0.1-SNAPSHOT.jar -Dloader.main=com.Codacy.Challeng
 
 ## Interacting with the application
 
-Open another terminal. The H2 database has been populated with 2 example todos at startup. We can view those todos using the cURL command. 
+Open another terminal. The H2 database has been populated with 2 example TODOs at startup. We can view those TODOs using the cURL command. 
 
 ```
 curl http://localhost:8080/ 
 ```
 
-In order to add a new todo, a PUT request can be sent.
+In order to add a new TODO, a PUT request can be sent as follows.
 
 ``` 
 curl -X PUT http://localhost:8080/?title=Do+laundry 
 ```
 
-To get a specific todo, use the following command where the number at the end is the ID of the todo.
+To view a specific TODO, use the following command where the number at the end is the ID of the TODO.
 
 ``` 
 curl http://localhost:8080/todo/1 
 ```
 
-In order to update a todo, use a PATCH request like the following. Again, the number at the end is the ID of the todo.
+In order to update a TODO, use a PATCH request like the following. Again, the number at the end of the URL is the ID of the TODO.
 
 ``` 
-curl -X PATCH http://localhost:8080/todo/1 -H "content-type: application/json" -d '{"id":1, "title":"Maintain garden", "completed":false}' 
+curl -X PATCH http://localhost:8080/todo/1 -H "content-type: application/json" -d '{"id":1, "title":"Cut grass", "completed":true}' 
 ```
 
-Finally, you can delete a todo with a DELETE request:
+Finally, you can delete a TODO with a DELETE request as follows, ending with the TODO ID.
 
 ``` 
 curl -X DELETE http://localhost:8080/todo/1 
