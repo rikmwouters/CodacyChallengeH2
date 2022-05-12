@@ -67,4 +67,4 @@ curl -X DELETE http://localhost:8080/todo/1
 ## Troubleshooting
 
 ### The servlet won't start
-If another application is already running on port 8080, the servlet is prevented from running. You can check whether the port is taken using the command ``` lsof -i:8080 ```. If a process on this port needs to be killed, the command ```kill $(lsof -t -i:8080)``` can be used for that.
+If another application is already running on port 8080, the servlet is prevented from running. You can check whether the port is taken by using the command ``` lsof -i:8080 ```. If a process needs to be killed, the command ```kill $(lsof -t -i:8080)``` can be used for that.
