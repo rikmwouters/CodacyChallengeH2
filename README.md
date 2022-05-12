@@ -58,7 +58,7 @@ java -cp target/ChallengeH2-0.0.1-SNAPSHOT.jar -Dloader.main=com.Codacy.Challeng
 
 ## Interacting with the application
 
-Please see the API endpoints table in the introduction section of this guide.
+For an overview of the API's functionalities, please see the API endpoints table in the introduction section of this guide.
 
 Open another terminal. The pre-loaded TODOs can be viewed using the following cURL command. 
 
@@ -72,19 +72,19 @@ The following command adds a new TODO to the database.
 curl -X PUT http://localhost:8080/?title=Do+laundry 
 ```
 
-To view a specific TODO (id=1 in this example), the following command can be used.
+The following command view a specific TODO, using its ```id``` value in the URL path.
 
 ``` 
 curl http://localhost:8080/todo/1 
 ```
 
-In order to update a TODO (again id=1), use a PATCH request such as the following. Note that the TODO is selected using the number in the URL path, NOT the ```id``` field in the request body JSON.
+The following command updates a TODO. The TODO is specified by its ```id``` value in the URL path, and the updated fields are added as a JSON object to the request body.
 
 ``` 
 curl -X PATCH http://localhost:8080/todo/1 -H "content-type: application/json" -d '{"id":1, "title":"Cut grass", "completed":true}' 
 ```
 
-Finally, a TODO can be deleted with a DELETE request such as the following, ending with the TODO ```id``` field.
+The following command deletes a TODO, which is also specified by its ```id``` value in the URL path.
 
 ``` 
 curl -X DELETE http://localhost:8080/todo/1 
