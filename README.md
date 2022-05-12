@@ -34,7 +34,7 @@ java -cp target/ChallengeH2-0.0.1-SNAPSHOT.jar -Dloader.main=com.Codacy.Challeng
 
 ## Interacting with the application
 
-Open another terminal. When the application is started, the H2 database is populated with 2 todos. We can view those todos using the cURL command. 
+Open another terminal. The H2 database has been populated with 2 example todos at startup. We can view those todos using the cURL command. 
 
 ```
 curl http://localhost:8080/ 
