@@ -69,7 +69,7 @@ curl http://localhost:8080/
 The following command adds a new TODO to the database.
 
 ``` 
-curl -X PUT 'http://localhost:8080/?title=Do+laundry&apos
+curl -X PUT 'http://localhost:8080/?title=Do+laundry&apos;
 ```
 
 The following command view a specific TODO, using its ```id``` value in the URL path.
